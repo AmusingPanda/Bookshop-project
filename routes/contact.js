@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', function (req, res, next){
 
-    res.render('contact', { title: 'Contact' });
+    res.render('contact');
 })
 
 module.exports = router;

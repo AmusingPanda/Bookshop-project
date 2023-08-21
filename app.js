@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
-
+const helpRouter = require('./routes/help');
+const privacyRouter = require('./routes/privacy');
 var app = express();
 
 // view engine setup
@@ -25,6 +26,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter); // includes the new route
+app.use('/help', helpRouter); // includes the new route
+app.use('/privacy', privacyRouter); // includes the new route
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
