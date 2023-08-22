@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var layouts = require('express-ejs-layouts'); // add this line
+
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -21,6 +24,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(layouts); // 
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -28,7 +34,6 @@ app.use('/about', aboutRouter);
 app.use('/contact', contactRouter); // includes the new route
 app.use('/help', helpRouter); // includes the new route
 app.use('/privacy', privacyRouter); // includes the new route
-
 
 
 // catch 404 and forward to error handler

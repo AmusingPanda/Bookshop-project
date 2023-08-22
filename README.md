@@ -16,3 +16,5 @@ npm install -g express-generator
 
 
 express --view=ejs 
+
+npm install express-ejs-layouts
