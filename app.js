@@ -40,6 +40,7 @@ const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
 const helpRouter = require('./routes/help');
 const privacyRouter = require('./routes/privacy');
+const booksRouter = require('./routes/books'); // add this line
 var app = express();
 
 // view engine setup
@@ -62,7 +63,7 @@ app.use('/about', aboutRouter);
 app.use('/contact', contactRouter); // includes the new route
 app.use('/help', helpRouter); // includes the new route
 app.use('/privacy', privacyRouter); // includes the new route
-
+app.use('/books', booksRouter); // includes the new route 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
