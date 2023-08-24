@@ -7,10 +7,15 @@ This is a simple web application project for IT 231 Web Development 1. This webs
 -------------------------------------------------------------------------
 
 ***This project uses mariadb as the database. To connect your mariadb, create a .env file with the following information:***
+
 DB_HOST=
+
 DB_DATABASE=
+
 DB_USER=
+
 DB_PASSWORD=
+
 DB_PORT=       
 
 I provided my SQL statements that I created in a file named dbExample.sql.
