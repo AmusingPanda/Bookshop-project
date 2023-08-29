@@ -1,0 +1,51 @@
+<% if (allrecs.length> 0) {%>
+    <% allrecs.forEach((recref, index)=> { %>
+        <product>
+            <form action="/catalog/add" method="post">
+                <input type="hidden" name="book_id" value=<%=recref.book_id %> >
+                <table border="1">
+                    <tr>
+                        <td>
+                            <%= recref.book_id %>
+                        </td>
+                        <td>
+                            <%= recref.title %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <%= recref.bookimage %>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <%= recref.publication_date.toDateString() %>
+                        </td>
+                        <td>
+                            <%= recref.language_id %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%= recref.publisher_id %>
+                        </td>
+                        <td>
+                            <%= recref.price %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%= recref.isbn %>
+                        </td>
+                        <td><a href='/book/<%= recref.book_id %>/show'>Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity: <input type="text" name="qty" size="3" required></td>
+                        <td><button type="submit" class="button2">Add to Cart</button></td>
+                    </tr>
+                </table>
+            </form>
+        </product>
+        <% }); %>
+            <% } %>

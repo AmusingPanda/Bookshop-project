@@ -1,0 +1,10 @@
+<h1> Edit</h1>
+<form action="/customerorder/save" method="post">
+  <input type="hidden" name="order_id" value="<%= onerec.order_id %>" >
+  <table border = '1'>
+    <tr> <td> Customer ID: </td> <td> <input type="number" name="customer_id" value="<%= onerec.customer_id %>" required> </td> </tr>
+    <tr> <td> Order Date: </td> <td> <input type="date" name="order_date" value="<%= onerec.order_date.toISOString().slice(0,10)  %>" required> </td> </tr>
+    <tr> <td> Shipping Method ID: </td> <td> <input type="number" name="shipping_method_id" value="<%= onerec.shipping_method_id %>" required> </td> </tr>
+  </table>
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,33 @@
+<h1>Product Listing</h1>
+
+<% if (allrecs.length > 0) {%>
+
+  <table border ='1'>
+  <tr>
+  <th>Book ID</th>
+  <th>Title</th>
+  <th>Publication Date</th>
+  <th>Language ID</th>
+  <th>Publisher ID</th>
+  <th>Price</th>
+  <th>ISBN</th>
+  <th>img</th>
+
+  </tr>
+  <% allrecs.forEach((recref, index) => { %>
+  <tr>
+  <td><%= recref.book_id %></td>
+  <td><%= recref.title %></td>
+  <td><%= recref.publication_date.toDateString() %></td>
+  <td><%= recref.language_id %></td>
+  <td><%= recref.publisher_id %></td>
+  <td>$<%= recref.price %></td>
+  <td><%= recref.isbn %></td>
+  <td><%= recref.bookimage %></td>
+  </tr>
+  <% }); %>
+  </table>
+  <% } else { %>
+  <p>No records available</p>
+  <% } %>
+ 

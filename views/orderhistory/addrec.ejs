@@ -1,0 +1,40 @@
+<h1> New Order History Record</h1>
+<form action="/orderhistory" method="post">
+<table border = '1'>
+  
+  <tr>
+    <td> Order ID: </td> 
+    <td> 
+      <select name="order_id" required>
+        <option selected disabled>Choose an order ID</option>
+        <% for (var i = 0; i < orders.length; i++) { %>
+          <option value="<%= orders[i].order_id %>">
+            <%= orders[i].order_id %> - <%= orders[i].first_name %> <%= orders[i].last_name %>
+          </option>
+        <% } %>
+      </select>     
+    </td>
+  </tr>
+
+  <tr>
+    <td> Status ID: </td> 
+    <td> 
+      <select name="status_id" required>
+        <option selected disabled>Choose a status ID</option>
+        <% for (var i = 0; i < status.length; i++) { %>
+          <option value="<%= status[i].status_id %>">
+            <%= status[i].status_id %> - <%= status[i].status_name %>
+          </option>
+        <% } %>
+      </select>     
+    </td>
+  </tr>
+  
+
+  <tr> 
+    <td> Update Date: </td> 
+    <td> <input type="date" name="update_date" required> </td> 
+  </tr>
+</table>
+<button type="submit">Save</button>
+</form>

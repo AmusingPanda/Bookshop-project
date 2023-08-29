@@ -1,0 +1,19 @@
+<h1>Edit Order History</h1>
+<form action="/orderhistory/save" method="post">
+  <input type="hidden" name="history_id" value="<%= onerec.history_id %>">
+  <table border = '1'>
+    <tr>
+      <td>Edit Order ID:</td>
+      <td><input type="number" name="order_id" value="<%= onerec.order_id %>" required></td>
+    </tr>
+    <tr>
+      <td>Edit Status ID:</td>
+      <td><input type="number" name="status_id" value="<%= onerec.status_id %>" required></td>
+    </tr>
+    <tr>
+      <td>Edit Update Date:</td>
+      <td><input type="date" name="update_date" value="<%= onerec.update_date.toISOString().slice(0,10)  %>" required></td>
+    </tr>
+  </table>
+  <button type="submit">Save</button>
+</form>

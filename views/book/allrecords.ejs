@@ -1,0 +1,43 @@
+<% if (allrecs.length > 0) { %>
+
+  <table border='1'>
+    <tr>
+      <th>Book ID</th>
+      <th>Title</th>
+      <th>Publication Date</th>
+      <th>Language</th>
+      <th>Publisher ID</th>
+      <th>Price</th>
+      <th>ISBN</th>
+      <th>Homepage?</th>
+      <th>Image</th>
+      <th>Details</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <% allrecs.forEach((recref, index) => { %>
+      <tr>
+        <td><%= recref.book_id %></td>
+        <td><%= recref.title %></td>
+        <td><%= recref.publication_date.toDateString() %></td>
+        <td><%= recref.language_id %></td>
+        <td><%= recref.publisher_id %></td>
+        <td>$<%= recref.price %></td>
+        <td><%= recref.isbn %></td>
+        <td><%= recref.homepage %></td>
+        <td><%= recref.bookimage %></td>
+        <td><a href='/book/<%= recref.book_id %>/show'>Details</a></td>
+        <td><a href='/book/<%= recref.book_id %>/edit'>Edit</a></td>
+        <td><a href='/book/<%= recref.book_id %>/delete'
+          onclick="return confirm('Are you sure you want to delete this record?');">Delete</a></td>
+      </tr>
+    <% }); %>
+  </table>
+
+<% } else { %>
+
+  <p>No records available</p>
+
+<% } %>
+
+<p><a href='/book/addrecord'>Add New</a></p>

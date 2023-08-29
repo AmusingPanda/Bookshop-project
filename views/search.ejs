@@ -1,0 +1,26 @@
+<h1>Search Result</h1>
+<% if (allrecs.length > 0) {%>
+	<table border = "1"><tr>
+        <th>Title</th>
+        <th>Publication Date</th>
+        <th>Language ID</th>
+        <th>Publisher ID</th>
+        <th>Price</th>
+        <th>ISBN</th>
+        <th>Details</th>
+	</tr>
+      	<% allrecs.forEach((recref, index) => { %>
+		<tr>
+			<td><%= recref.title %></td>
+            <td><%= recref.publication_date.toDateString() %></td>
+            <td><%= recref.language_id %></td>
+            <td><%= recref.publisher_id %></td>
+            <td><%= recref.price %></td>
+            <td><%= recref.isbn %></td>
+			<td><a href='/book/<%= recref.book_id %>/show'>Details</a></td>
+        </tr>
+        <% }); %>
+	</table>
+        <% } else { %>
+            <p>We do not have this book available at moment, please keep a look out or email us so we can add it :)</p>
+        <% } %>

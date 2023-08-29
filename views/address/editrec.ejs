@@ -1,0 +1,31 @@
+<h1>Edit Address</h1>
+<form action="/address/save" method="post">
+  <input type="hidden" name="address_id" value="<%= onerec.address_id %>">
+  <table border = '1'>
+    <tr>
+      <td>Street Number:</td>
+      <td><input type="text" name="street_number" value="<%= onerec.street_number %>" required></td>
+    </tr>
+    <tr>
+      <td>Street Name:</td>
+      <td><input type="text" name="street_name" value="<%= onerec.street_name %>" required></td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td><input type="text" name="city" value="<%= onerec.city %>" required></td>
+    </tr>
+    <tr>
+      <td>State:</td>
+      <td><input type="text" name="state" value="<%= onerec.state %>" required></td>
+    </tr>
+    <tr>
+      <td>Postal Code:</td>
+      <td><input type="text" name="postal_code" value="<%= onerec.postal_code %>" required></td>
+    </tr>
+    <tr>
+      <td>Country ID:</td>
+      <td><input type="number" name="country_id" value="<%= onerec.country_id %>" required></td>
+    </tr>
+  </table>
+  <button type="submit">Save</button>
+</form>

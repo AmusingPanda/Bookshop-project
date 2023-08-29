@@ -1,0 +1,44 @@
+<h1> New Customer Order</h1>
+<form action="/customerorder" method="post">
+<table border = '1'>
+
+
+  <tr>
+        <td> Customer ID: </td> 
+        <td> 
+          <select name="customer_id" required>
+            <option selected disabled>Choose a customer</option>
+            <% for (var i = 0; i < customer.length; i++) { %>
+              <option value=<%= customer[i].customer_id %>> 
+                <%= customer[i].customer_id %> - <%= customer[i].first_name %> <%= customer[i].last_name %>
+              </option>
+            <% } %>
+          </select>
+        </td>
+      </tr>
+
+
+
+  <tr> 
+    <td> Order Date: </td> 
+    <td> <input type="date" name="order_date" required> </td> 
+  </tr>
+
+  <tr>
+    <td> Shipping Method ID: </td> 
+    <td> 
+      <select name="shipping_method_id" required>
+        <option selected disabled>Choose a shipping method</option>
+        <% for (var i = 0; i < shipping.length; i++) { %>
+          <option value=<%= shipping[i].shipping_method_id %>> 
+            <%= shipping[i].shipping_method_id %> - <%= shipping[i].shipping_method_name %>
+          </option>
+        <% } %>
+      </select>
+    </td>
+  </tr>
+
+
+</table>
+<button type="submit">Save</button>
+</form>

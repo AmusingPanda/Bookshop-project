@@ -1,33 +1,43 @@
-<!DOCTYPE html>
-<html lang= "en" >
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bookshop of Alexandria</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-
-  <body>
-    <table bgcolor="#E8F9FD" width="100%" height="120px">
-
-      <tr>
-        <td width="20%" align="left">
-          <a href="/"><img src="/images/logo.jpg" width="90" height="90" /> </a>
-        </td>
-
-        <td width="60%" align="center"><h1>Bookshop of Alexandria</h1></td>
-        <td width="10%" align="center">Login Control</td>
-        <td width="10%" align="center">Cart Control</td>
-      </tr>
-    </table>
-    
-    <ul>
-      <p>SEARCH CONTROL</p>
-
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/contact">Contact Us</a></li>
-      <li> <a href="/books">Books</a> </li>
-    </ul>
-  </body>
-</html>
+<table bgcolor = '#B5B7C8' width = '100%'> <tr>
+  <td width='20%' align='left'>
+  <a href="/"><img src="/images/logo.png" width="200" height="70"> </a></td> 
+  <td width='60%' align='center'><h1>Bookshop of Alexandria</h1></td>
+   <td width='10%' align='center'>
+  <% if(session.customer_id > 0) { %>
+    <b> Hello <b> <%= session.custname %>! </b> </br>
+    <a href='/customer/logout'>Logout</a> 
+  <% } else { %>
+    <a href='/register'>New Customer</a> </br>
+    <a href='/customer/login'>Login</a> 
+  <% } %>	
+</td>
+   <td width='10%' align='center'><a href="/catalog/cart">Cart</a></td>
+</tr></table>
+  <p> 
+      <form action="/search" method="get">
+          <p>Search For Book Names <input type="text" name="searchcriteria">
+              <input type="submit" value="Go">
+           </p>
+      </form>
+  </p>
+  <ul>
+  <li> <a href = "/">Home</a> </li>
+  <li> <a href = "/about">About Us</a> </li>
+  <li> <a href = "/contact">Contact Us</a> </li>
+  <li> <a href = "/catalog">Catalog</a> </li>
+  <li> <a href="/address">Address</a></li>
+  <li> <a href="/author">Author</a></li>
+  <li> <a href="/book">Books</a></li>
+  <li> <a href="/booklanguage">Book Language</a></li>
+  <li> <a href="/country">Country</a> </li>
+  <li> <a href="/customer">Customers</a></li>
+  <li> <a href="/customerorder">Customer Order </a></li>
+  <li> <a href="/orderhistory">Order History </a></li>
+  <li> <a href="/orderline">Order Line</a></li>
+  <li> <a href="/orderstatus">Order Status</a></li>
+  <li> <a href="/publisher">Publisher</a></li>
+  <li> <a href="/review">Review</a></li>
+  <li> <a href="/shippingmethod">Shipping Method</a></li>
+  <li> <a href="/report">Reports</a> </li>
+  </ul>
+  

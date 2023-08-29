@@ -1,0 +1,51 @@
+<h1> New Record</h1>
+<form action="/orderline" method="post">
+<table border = '1'>
+
+    
+  <tr>
+    <td> Order ID: </td> 
+    <td> 
+      <select name="order_id" required>
+        <option selected disabled>Choose an order ID</option>
+        <% for (var i = 0; i < orders.length; i++) { %>
+          <option value="<%= orders[i].order_id %>">
+            <%= orders[i].order_id %> - <%= orders[i].first_name %> <%= orders[i].last_name %>
+          </option>
+        <% } %>
+      </select>     
+    </td>
+  </tr>
+
+  <tr>
+    <td> Book ID: </td> 
+    <td> 
+      <select name="book_id" required>
+        <option selected disabled>Choose a book ID</option>
+        <% for (var i = 0; i < book.length; i++) { %>
+          <option value="<%= book[i].book_id %>">
+            <%= book[i].book_id %> - <%= book[i].title %>
+          </option>
+        <% } %>
+      </select>     
+    </td>
+  </tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr> <td> Quantity: </td> <td> <input type="number" name="quantity" required> </td> </tr>
+</table>
+<button type="submit">Save</button>
+</form>

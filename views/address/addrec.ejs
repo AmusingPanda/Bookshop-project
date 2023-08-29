@@ -1,0 +1,53 @@
+<h1>New Address</h1>
+<form action="/address" method="post">
+  <table border = '1'>
+    <tr>
+      <td>Street Number:</td>
+      <td><input type="text" name="street_number" required></td>
+    </tr>
+    <tr>
+      <td>Street Name:</td>
+      <td><input type="text" name="street_name" required></td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td><input type="text" name="city" required></td>
+    </tr>
+    <tr>
+      <td>State:</td>
+      <td><input type="text" name="state" required></td>
+    </tr>
+    <tr>
+      <td>Postal Code:</td>
+      <td><input type="text" name="postal_code" required></td>
+    </tr>
+
+    <tr> <td> Country ID: </td> 
+      <td> 
+        <select name="country_id" required>
+          <option selected disabled>Choose a country</option>
+          <% for (var i = 0; i < country.length; i++) { %>
+            <option value=<%= country[i].country_id %>> 
+                <%= country[i].country_id %> - <%= country[i].country_name %> </option>
+          <% } %>
+        </select>          
+          </tr>
+      </td>
+
+      <tr>
+        <td> Customer ID: </td> 
+        <td> 
+          <select name="customer_id" required>
+            <option selected disabled>Choose a customer</option>
+            <% for (var i = 0; i < customer.length; i++) { %>
+              <option value=<%= customer[i].customer_id %>> 
+                <%= customer[i].customer_id %> - <%= customer[i].first_name %> <%= customer[i].last_name %>
+              </option>
+            <% } %>
+          </select>
+        </td>
+      </tr>
+
+  </table>
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,11 @@
+<h1>Edit Order Status</h1>
+<form action="/orderstatus/save" method="post">
+    <input type="hidden" name="status_id" value="<%= onerec.status_id %>">
+    <table border = '1'>
+        <tr>
+            <td>Status Name:</td>
+            <td><input type="text" name="status_name" value="<%= onerec.status_name %>" required></td>
+        </tr>
+    </table>
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,31 @@
+<% if (allrecs.length > 0) {%>
+
+  <table border ='1'>
+  <tr>
+  <th>History ID</th>
+  <th>Order ID</th>
+  <th>Status ID</th>
+  <th>Update Date</th>
+  <th>Details</th>
+  <th>Edit</th>
+  <th>Delete</th>
+  </tr>
+  <% allrecs.forEach((recref, index) => { %>
+  <tr>
+  <td><%= recref.history_id %></td>
+  <td><%= recref.order_id %></td>
+  <td><%= recref.status_id %></td>
+  <td><%= recref.update_date.toDateString() %></td>
+  <td><a href='/orderhistory/<%= recref.history_id %>/show'>
+  Details</a></td>
+  <td><a href='/orderhistory/<%= recref.history_id %>/edit'>Edit</a></td>
+  <td><a href='/orderhistory/<%= recref.history_id %>/delete'
+  onclick="return confirm('Are you sure you want to delete this record?');">Delete</a></td>
+  </tr>
+  <% }); %>
+  </table>
+  <% } else { %>
+  <p>No Records Available</p>
+  <% } %>
+
+  <p><a href='/orderhistory/addrecord'>Add New</a></p>

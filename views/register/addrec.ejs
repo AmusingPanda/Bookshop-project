@@ -1,0 +1,72 @@
+<h1>Create an account</h1>
+<form action="/register" method="post">
+  <table border = '1'>
+
+    <tr>
+      <td>First Name:</td>
+      <td><input type="text" name="first_name" required></td>
+    </tr>
+
+    <tr>
+      <td>Last Name:</td>
+      <td><input type="text" name="last_name" required></td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" required></td>
+    </tr>
+
+    <tr>
+      <td>Username:</td>
+      <td><input type="text" name="username" required></td>
+    </tr>
+
+    <tr>
+    <td>Password:</td>
+      <td><input type="password" name="password" required></td>
+    </tr>
+
+
+    <tr>
+    <td>Street Number:</td>
+      <td><input type="number" name="street_number" required></td>
+    </tr>
+
+    <tr>
+    <td>Street name:</td>
+    <td><input type="text" name="street_name" required></td>
+  </tr>
+
+  <tr>
+  <td>city:</td>
+  <td><input type="text" name="city" required></td>
+</tr>
+
+<tr>
+<td>state:</td>
+<td><input type="text" name="state" required></td>
+</tr>
+
+<tr>
+<td>Postal code:</td>
+<td><input type="number" name="postal_code" required></td>
+</tr>
+
+
+<tr>
+    <tr> <td> Country: </td> 
+      <td> 
+        <select name="country_id" required>
+          <option selected disabled>Choose a country</option>
+          <% for (var i = 0; i < country.length; i++) { %>
+            <option value=<%= country[i].country_id %>> 
+                <%= country[i].country_id %> - <%= country[i].country_name %> </option>
+          <% } %>
+        </select>          
+          </tr>
+      </td>
+
+  </table>
+  <button type="submit">Save</button>
+</form>

@@ -1,13 +1,9 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-
-/* GET help page. */
-
-router.get('/', function(req,res,next)
-{   
-    res.render('help');
-    
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('help', { title: 'help' });
 });
 
 module.exports = router;

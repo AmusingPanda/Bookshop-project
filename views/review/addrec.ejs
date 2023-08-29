@@ -1,0 +1,55 @@
+<h1> New Review</h1>
+<form action="/review" method="post">
+  <table border = '1'>
+
+    <tr>
+      <td> Customer ID: </td> 
+      <td> 
+        <select name="customer_id" required>
+          <option selected disabled>Choose a customer</option>
+          <% for (var i = 0; i < customer.length; i++) { %>
+            <option value=<%= customer[i].customer_id %>> 
+              <%= customer[i].customer_id %> - <%= customer[i].first_name %> <%= customer[i].last_name %>
+            </option>
+          <% } %>
+        </select>
+      </td>
+    </tr>
+
+
+
+    <td> Book ID: </td> 
+    <td> 
+      <select name="book_id" required>
+        <option selected disabled>Choose a book ID</option>
+        <% for (var i = 0; i < book.length; i++) { %>
+          <option value="<%= book[i].book_id %>">
+            <%= book[i].book_id %> - <%= book[i].title %>
+          </option>
+        <% } %>
+      </select>     
+    </td>
+  </tr>
+
+  <tr>
+  <td> rating: </td> 
+  <td> 
+     <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select> 
+  </td>
+</tr>
+
+    <tr>
+      <td> Review Text: </td> 
+      <td> <textarea name="review_text" required></textarea> </td> 
+    </tr>
+
+
+  </table>
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,16 @@
+<h1> Edit</h1>
+<form action="/book/save" method="post">
+<input type="hidden" name="book_id" value="<%= onerec.book_id %>" >
+<table border = '1'>
+<tr> <td> Edit Title: </td> <td> <input type="text" name="title" value="<%= onerec.title %>" required> </td> </tr>
+<tr> <td> Edit Publication Date: </td> <td> <input type="date" name="publication_date" value="<%= onerec.publication_date.toISOString().slice(0,10) %>" required> </td> </tr>
+<tr> <td> Edit Language ID: </td> <td> <input type="number" name="language_id" value="<%= onerec.language_id %>" required> </td> </tr>
+<tr> <td> Edit Publisher ID: </td> <td> <input type="number" name="publisher_id" value="<%= onerec.publisher_id %>" required> </td> </tr>
+<tr> <td> Edit Price: </td> <td> <input type="number" step="any" name="price" value="<%= onerec.price %>" required> </td> </tr>
+<tr> <td> Edit ISBN: </td> <td> <input type="text" name="isbn" value="<%= onerec.isbn %>" required> </td> </tr>
+<tr> <td> Edit Homepage? </td> <td> <input type="checkbox" name="homepage" value="<%= onerec.homepage %>"> </td> </tr>
+<tr> <td> Edit Image: </td> <td> <input type="text" name="bookimage" value="<%= onerec.bookimage %>"> </td> </tr>
+
+</table>
+<button type="submit">Save</button>
+</form>

@@ -1,0 +1,11 @@
+<h1> Edit Customer </h1>
+<form action="/customer/save" method="post">
+<input type="hidden" name="customer_id" value="<%= onerec.customer_id %>">
+<table border = '1'>
+<tr> <td> Edit First Name: </td> <td> <input type="text" name="first_name" value="<%= onerec.first_name %>" required> </td> </tr>
+<tr> <td> Edit Last Name: </td> <td> <input type="text" name="last_name" value="<%= onerec.last_name %>" required> </td> </tr>
+<tr> <td> Edit Email: </td> <td> <input type="email" name="email" value="<%= onerec.email %>" required> </td> </tr>
+<tr> <td> Edit Username: </td> <td> <input type="text" name="username" value="<%= onerec.username %>" required> </td> </tr>
+</table>
+<button type="submit">Save</button>
+</form>

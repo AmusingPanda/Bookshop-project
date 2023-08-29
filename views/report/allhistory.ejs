@@ -1,0 +1,24 @@
+<h1>Customer Order History Listing</h1>
+<% if (allrecs.length > 0) {%>
+
+  <table border ='1'>
+  <tr>
+  <th>History ID</th>
+  <th>Order ID</th>
+  <th>Status ID</th>
+  <th>Update Date</th>
+  </tr>
+  <% allrecs.forEach((recref, index) => { %>
+  <tr>
+  <td><%= recref.history_id %></td>
+  <td><%= recref.order_id %></td>
+  <td><%= recref.status_id %></td>
+  <td><%= recref.update_date.toDateString() %></td>
+  </tr>
+  <% }); %>
+  </table>
+  <% } else { %>
+  <p>No Records Available</p>
+  <% } %>
+
+ 

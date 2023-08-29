@@ -1,0 +1,9 @@
+<h1> Edit</h1>
+<form action="/author/save" method="post">
+<input type="hidden" name="author_id" value="<%= onerec.author_id %>" >
+<table border = '1'>
+<tr> <td> Edit Author First Name: </td> <td> <input type="text" name="first_name" value="<%= onerec.first_name %>" required> </td> </tr>
+<tr> <td> Edit Author Last Name: </td> <td> <input type="text" name="last_name" value="<%= onerec.last_name %>" required> </td> </tr>
+</table>
+<button type="submit">Save</button>
+</form>
