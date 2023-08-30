@@ -51,6 +51,6 @@ npm install bcryptjs
 
 # Assignments:
 
-I created an assignment.txt file explaining what was required for this web project.
+I created an assignment.md file explaining what was required for this web project.
 
 

@@ -1,30 +1,39 @@
-Assignment 1: 
+# Assignment 1: 
 
-1) Create an express web application for your project.
-2) Configure the web application to run on your assigned port number.
-3)The web application to be comprised of 3 static pages/views:
+A. Create an express web application for your project.
+
+B. Configure the web application to run on your assigned port number.
+
+C. The web application to be comprised of 3 static pages/views:
+
     Index
     About
     Contact
-4) Populate each static page with some basic content appropriate for your website.
 
-Assignment 2: 
+D. Populate each static page with some basic content appropriate for your website.
+
+# Assignment 2: 
 
 A.  Define layout with header and footer section content in external files.
+
 B.  Define content display rules of your website using stylesheet.
+
 C.  Add a meaningful appropriately sized logo image on the header section.
+
 D.  Enhance static page with some basic content appropriate for your website.
+
 E.  Create navigation links to the views in your application.
 
-Assignment 3:
+# Assignment 3:
 
 Research and identify the data you would need to manage as part of your application. 
 Determine tables and columns required for your application.
 You may define the data structure in either Word or Excel or equivalent software. 
 
-Assignment 4:
+# Assignment 4:
 
-Part 1: Create Database & Connect Application
+#### Part 1: Create Database & Connect Application
+
 a.) Create database for your application on the school server.
 
 b.) Create the tables for your application.
@@ -52,7 +61,7 @@ f.2.) Enable Delete capability for each record.
 g.) Create hyperlinks for each table in the header section to list view (view #1)
 
 
-Part 2: Additional Application Views
+#### Part 2: Additional Application Views
 
 a.) Add two additional static views to your website.
 
@@ -60,9 +69,9 @@ b.) The two views should be named as "privacy" and "help".
 
 c.) Link the two newly created views in the footer section.
 
-Assignment 5: 
+# Assignment 5: 
 
-Part 1: Online Reports:
+#### Part 1: Online Reports:
 
 Create a new route called "reports" with views for following purposes:
 
@@ -76,7 +85,7 @@ d.) A view that lists all the sales (customer, product, sale date, sale price, e
 
 e.) Create the link for the reports listing view (view of step a) on the header section of your application.
 
-Part 2: Search:
+#### Part 2: Search:
 
 Create a new route and associated view to enable customers search for product or services available for sale:
 
@@ -88,7 +97,7 @@ c.) Provide search control on the application header to make search capability a
 
 d.) OPTIONAL: In the search results, enable link to view product/service details by linking it to the "Details" view.
 
-Part 3: Advertisements:
+# Part 3: Advertisements:
 
 Create a section on the home page to show advertisements or promotions of your products or services:
 
@@ -99,9 +108,9 @@ b.) Load some sample data. Create some sample images and place them in "public\i
 c.) Modify the index route and index view (homepage) to show active "promotion". Active promotions are when today's date fall between the start date and end date.
 
 
-Assignment 6: 
+# Assignment 6: 
 
-Part 1: Shopping Cart
+#### Part 1: Shopping Cart
 
 a.) Create a catalog of all products/services available for sale
 
@@ -115,7 +124,7 @@ e.) Enable customer remove desired items from shopping cart
 
 f.) Enable customer to Checkout that leads to saving desired products and quantities in sale record (SaleOrder and OrderDetails tables)
 
-Part 2: Customer Registration - Password Encryption
+#### Part 2: Customer Registration - Password Encryption
 
 a.) If required, modify Customer table to accommodate username and password columns
 
