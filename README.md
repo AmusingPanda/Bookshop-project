@@ -9,15 +9,15 @@ This is a simple web application project for IT 231 Web Development 1. This webs
 # Database used: 
 This project uses mariadb as the database. To connect your mariadb, create a .env file with the following information
 
-DB_HOST=
+    DB_HOST=
 
-DB_DATABASE=
+    DB_DATABASE=
 
-DB_USER=
+    DB_USER=
 
-DB_PASSWORD=
+    DB_PASSWORD=
 
-DB_PORT=    
+    DB_PORT=    
    
 
 
@@ -27,25 +27,23 @@ DB_PORT=
 
 # npm installments used for this project:
 
-npm install
+    npm install
 
-npm -g install express --save
+    npm -g install express --save
 
-npm install -g express-generator
+    npm install -g express-generator
 
-express --view=ejs .
+    npm install express-ejs-layouts
 
-npm install express-ejs-layouts
+    npm install -g nodemon
 
-npm install -g nodemon
+    npm install mariadb
 
-npm install mariadb
+    npm install dotenv
 
-npm install dotenv
+    npm install --save express-session
 
-npm install --save express-session
-
-npm install bcryptjs
+    npm install bcryptjs
 
 <br>
 
