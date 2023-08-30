@@ -115,7 +115,7 @@ e.) Enable customer remove desired items from shopping cart
 
 f.) Enable customer to Checkout that leads to saving desired products and quantities in sale record (SaleOrder and OrderDetails tables)
 
-Part 2: Customer Registration - Password Encryption [50 Points]
+Part 2: Customer Registration - Password Encryption
 
 a.) If required, modify Customer table to accommodate username and password columns
 
